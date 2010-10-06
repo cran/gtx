@@ -1,0 +1,20 @@
+Version 0.0.1 (2011 Oct 4) first informal release of package
+
+Version 0.0.2 (2011 Oct 6)
+	Changed name of update.snpdata.coding() function to align.snpdata.coding()
+	Added stepwise model selection stepup.moments2()
+	Added approximation for logistic regression gls.approx.logistic()
+	Added simulated example dataset mthfrex
+	Many edits and improvements to documentation
+	Fixed many warnings and errors identified by R CMD check
+
+Version 0.0.3 (2011 Oct ???) first submission to CRAN
+	Edits and improvements to documentation to pass R CMD check with no warnings
+	Most functions now have an example in the documentation
+	All read.snpdata.*() functions now return an object of class "snpdata"
+	Added is.snpdata() and as.snpdata() functions and summary.snpdata() method
+TO DO	Functions expecting a snpdata argument check using stopifnot(is.snpdata(...))
+TO DO	make.moments2 now returns an object of class "moments2"
+TO DO	Added is.moments2() and as.moments2() functions and summary.moments2() method
+TO DO	Functions expecting an xtx argument check using stopifnot(is.moments2(...))
+	
