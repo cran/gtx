@@ -8,7 +8,7 @@ Version 0.0.2 (2011 Oct 6)
 	Many edits and improvements to documentation
 	Fixed many warnings and errors identified by R CMD check
 
-Version 0.0.3 (2011 Oct ???) first submission to CRAN
+Version 0.0.3 (2011 Nov 16) first submission to CRAN
 	Edits and improvements to documentation to pass R CMD check with no warnings
 	Most functions now have an example in the documentation
 	All read.snpdata.*() functions now return an object of class "snpdata"
@@ -17,4 +17,45 @@ TO DO	Functions expecting a snpdata argument check using stopifnot(is.snpdata(..
 TO DO	make.moments2 now returns an object of class "moments2"
 TO DO	Added is.moments2() and as.moments2() functions and summary.moments2() method
 TO DO	Functions expecting an xtx argument check using stopifnot(is.moments2(...))
+	Added stepdown.moments2()
+
+Version 0.0.4 (2011 Nov)
+	In align.snpdata.coding(), removed useless stopifnot()s, and
+	corrected value used (when ploidy!=2) in dosage upper range check and
+	denominator for calculating params$data.coded.freq
+
+	In gls.approx.logistic(), fixed stopifnot() to allow missing
+	values leftvar, forced intercept into model, made default
+	rightvars=NULL, added outvar and weightvar arguments
+
+	make.moments2 now returns an object of class "moments2" with
+	attribute "vscale" set to NULL or 1 if unweighted or weighted
+	respectively
+
+	Added is.moments2()
+
+	est.moments2 checks "vscale" attribute of xtwx argument and uses
+	this instead of function argument (with warning if different), and
+	checks vscale==NULL before inferring n from xtwx["ONE","ONE"]
+
+version 0.0.5 (2012 March)
+
+	Added tools to help BLAT SNP or mutation sequences:
+	sanitise.whitespace(), getSNP(), remap.q2t()
+
+	Added multipheno.T2() for tests of association with >1 phenotype
+	Added abf.* for approximate Bayes factors, as used for Johnson et
+		al. 2011 AJHG paper
+
+version 0.0.6 (2012 September)
+
+	Added dsuffix and isuffix arguments to read.snpdata.mach
+	Added wrapper function read.snpdata.minimac
+	Added snphwe wrapper for Wiggington et al. code
+
+version 0.0.7 (2012 September)
+	Fixed gtx-package.Rd to be proper package documentation
+	Made examples for fitmix* run faster by reducing number 
+	       of iterations and restarts
+
 	
