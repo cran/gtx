@@ -52,10 +52,20 @@ version 0.0.6 (2012 September)
 	Added dsuffix and isuffix arguments to read.snpdata.mach
 	Added wrapper function read.snpdata.minimac
 	Added snphwe wrapper for Wiggington et al. code
+	Added magic.scores data
 
 version 0.0.7 (2012 September)
 	Fixed gtx-package.Rd to be proper package documentation
-	Made examples for fitmix* run faster by reducing number 
-	       of iterations and restarts
+	Made examples for fitmix* run faster by reducing number
+	        of iterations and restarts
+	Made example for multipheno.T2 run faster by reducing
+	        number of SNPs
 
-	
+version 0.0.8 (2013 January)
+	Added liver.scores and lipid.cad.scores data
+	Added vignette ashg2012
+	Added contrasting.rainbow
+	Added mincover
+	Added documentation warning pitfalls heterogeneity test and especially
+		of stepwise procedure, in grs.summary.Rd and grs.filter.Qrs.Rd
+	All as.real changed to as.double
